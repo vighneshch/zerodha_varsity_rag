@@ -25,7 +25,7 @@ def get_answer(docs,query):
     """
     response = llm.invoke(prompt)
 
-    return response
+    return response.content
     
 
 

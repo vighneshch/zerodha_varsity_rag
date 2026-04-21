@@ -4,7 +4,7 @@ from rag_app.generator import get_answer
 
 def answer(query):
     retriever = get_retriever()
-    docs = retriever.get_relevant_documents(query)
+    docs = retriever.invoke(query)
     answer = get_answer(docs,query)
 
     return answer
