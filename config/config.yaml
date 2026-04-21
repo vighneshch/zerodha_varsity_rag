@@ -16,4 +16,7 @@ chunking:
 vectorstore:
   embedding_model_dimension: 384
   distance: COSINE
+
+env:
+  env_path: D:\LangchainProjects\.env
   
