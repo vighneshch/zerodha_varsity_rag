@@ -1,0 +1,19 @@
+paths:
+  data_dir: data/docs
+
+model:
+  model_name: llama3.1-8b
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+
+qdrant:
+  url: http://localhost:6333
+  collection_name: zerodha_varsity_collection
+
+chunking:
+  chunk_length: 500
+  chunk_overlap: 100
+
+vectorstore:
+  embedding_model_dimension: 384
+  distance: COSINE
+  
