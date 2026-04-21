@@ -10,7 +10,13 @@ def get_answer(docs,query):
     llm = ChatCerebras(model=config['model']['model_name'])
 
     context = "\n\n".join(d.page_content for d in docs)
+    sources = []
 
+    for d in docs:
+        sources.append({
+            "source":d.metadata.get("source"),
+            "page":d.metadata.get("page")
+        })
 
     prompt = f"""You are a helpful zerodha assistant.
     Answer only from the context below.
@@ -25,7 +31,7 @@ def get_answer(docs,query):
     """
     response = llm.invoke(prompt)
 
-    return response.content
+    return {"answer":response.content,"sources":sources}
     
 
 
