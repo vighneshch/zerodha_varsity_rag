@@ -1,0 +1,9 @@
+langchain_cerebras==0.8.2
+langchain_community==0.4.1
+langchain_huggingface==1.2.2
+langchain_qdrant==1.1.0
+langchain_text_splitters==1.1.2
+python-dotenv==1.2.2
+PyYAML==6.0.2
+PyYAML==6.0.3
+qdrant_client==1.17.1
