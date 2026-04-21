@@ -22,27 +22,3 @@ A production-style **Retrieval-Augmented Generation (RAG)** system built using:
 ---
 
 ## 🏗️ Project Structure
-Project_1/
-│
-├── config/
-│ └── config.yaml
-│
-├── ingestion/
-│ ├── run_ingestion.py
-│ └── loader.py
-│
-├── rag_app/
-│ ├── pipeline.py
-│ ├── retriever.py
-│ └── generator.py
-│
-├── vectorstore/
-│ └── schema.py
-│
-├── tests/
-│ └── test_pipeline.py
-│
-├── data/
-│ └── docs/ # PDF files
-│
-└── requirements.txt
