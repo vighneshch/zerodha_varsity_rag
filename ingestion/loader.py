@@ -14,6 +14,7 @@ def load_documents(folder):
 
             for document in pdf_docs:
                 document.metadata["source"] = file
+                document.metadata["page"] = document.metadata.get("page",None)
             
             docs.extend(pdf_docs)
         

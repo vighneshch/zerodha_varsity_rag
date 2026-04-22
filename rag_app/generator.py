@@ -32,7 +32,5 @@ def get_answer(docs,query):
     response = llm.invoke(prompt)
 
     return {"answer":response.content,"sources":sources}
-    
-
 
 
