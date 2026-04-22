@@ -1,7 +1,7 @@
 # Loading the required libraries
 from fastapi import FastAPI,Query
 from rag_app.pipeline import answer
-import asynchio
+import asyncio
 
 app =  FastAPI(
     title = "Zerodha Varsity RAG",
@@ -16,9 +16,7 @@ async def home():
 @app.get("/query")
 async def query(q:str = Query(...,description="Ask your question")):
     try:
-        loop = asynchio.get_event_loop()
-        
-        result = await loop.run_in_executor(None,answer,q)
+        result = await asyncio.to_thread(answer,q)
         return {
             "query":q,
             "answer":result["answer"],

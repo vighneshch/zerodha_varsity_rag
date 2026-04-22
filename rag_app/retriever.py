@@ -14,6 +14,6 @@ def get_retriever():
     vector_db  = QdrantVectorStore(client=client,
                                    collection_name=qdrant_collection_name,
                                    embedding=embeddings)
-    retreiver = vector_db.as_retriever(search_kwargs={"k":3})
+    retreiver = vector_db.as_retriever(search_type="mmr",search_kwargs={"k":5,"fetch_k":10})
 
     return retreiver
